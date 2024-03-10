@@ -173,9 +173,9 @@ int main(int argc, char* argv[]) {
     // Set number of threads
     omp_set_num_threads(8);
 
-    if (argc != 7) {
+    if (argc != 6) {
         printf("You should enter the following parameters in order:\n");
-        printf("N filname nsteps delta_t graphics theta\n");
+        printf("N filename nsteps delta_t theta\n");
         return 1;
     }
 
@@ -183,8 +183,7 @@ int main(int argc, char* argv[]) {
     char* filename = argv[2];
     int nsteps = atoi(argv[3]);
     double delta_t = atof(argv[4]);
-    int graphics = atoi(argv[5]);
-    theta_0 = atof(argv[6]);
+    theta_0 = atof(argv[5]);
 
     FILE* data_file = fopen(filename, "rb");
     if (data_file == NULL) {
