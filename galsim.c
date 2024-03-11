@@ -175,7 +175,7 @@ int main(int argc, char* argv[]) {
 
     if (argc != 6) {
         printf("You should enter the following parameters in order:\n");
-        printf("N filename nsteps delta_t theta\n");
+        printf("N filename nsteps delta_t theta_0\n");
         return 1;
     }
 
@@ -322,4 +322,3 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-
